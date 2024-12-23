@@ -208,7 +208,7 @@ body.timer-running .circle-progress {
 
 /* Spotify Player Styles */
 #spotify-player {
-  margin-top: 40px;
+  margin-top: 20px;
   border-radius: 12px;
   overflow: hidden;
 }
