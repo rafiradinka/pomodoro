@@ -28,11 +28,10 @@
   width: 100%;
 }
 
-/* Hapus styling untuk .navbar dan tambahkan styling baru untuk #sidebar-close */
 #sidebar-close {
   position: fixed;
   top: 15px;
-  left: 350px; /* Posisi dari kiri setelah sidebar */
+  left: 350px;
   color: #ffffff;
   padding: 5px;
   font-size: 25px;
@@ -53,7 +52,6 @@
   justify-content: center;
   height: 100vh;
   z-index: 100;
-  background: #76624c;
 }
 
 .todo-app {
@@ -448,4 +446,50 @@ body.rest-mode.timer-paused #feh-timer-pause {
 
 body.rest-mode.timer-paused #feh-timer-rest {
   opacity: 0;
+}
+
+@media (max-width: 450px) {
+  .sidebar {
+    position: fixed;
+    height: 100%;
+    width: 400px;
+    background: #231e19;
+    padding: 15px;
+    z-index: 999;
+    transition: transform 0.5s ease, width 0.5s ease;
+    transform: translateX(0); /* Posisi default */
+  }
+
+  .sidebar.close {
+    transform: translateX(-400px); /* Geser keluar layar */
+  }
+
+  .main {
+    left: 400px;
+    width: calc(100% - 400px);
+    transition: left 0.5s ease, width 0.5s ease;
+    z-index: 99;
+  }
+
+  .sidebar.close ~ .main {
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  #sidebar-close {
+    position: fixed;
+    top: 15px;
+    left: 350px;
+    color: #ffffff;
+    padding: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 1001;
+    transition: left 0.5s ease;
+  }
+
+  .sidebar.close ~ #sidebar-close {
+    left: 20px;
+  }
 }
