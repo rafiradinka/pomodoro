@@ -62,7 +62,7 @@ showTask();
   const fehBody = document.body;
   const workDurationInput = document.getElementById("work-duration");
   const restDurationInput = document.getElementById("rest-duration");
-  const timerTime = document.getElementById("feh-timer-time");
+  const timerTime = document.getElementById("timer-time");
   const circleProgress = document.querySelector(".circle-progress");
   const spotifyPlayer = document.querySelector("#spotify-player iframe");
 
@@ -73,9 +73,8 @@ showTask();
   let isWorking = true;
   let interValId;
 
-  const completedSeassionsElement = document.getElementById(
-    "feh-completed-sessions"
-  );
+  const completedSeassionsElement =
+    document.getElementById("completed-sessions");
   let completedSessions = 0;
 
   // page loaded
@@ -127,8 +126,8 @@ showTask();
   });
 
   // settings
-  const btnToggleSettings = document.getElementById("feh-toggle-settings");
-  const btnCloseSettings = document.getElementById("feh-close-settings");
+  const btnToggleSettings = document.getElementById("toggle-settings");
+  const btnCloseSettings = document.getElementById("close-settings");
 
   function setBodySettings() {
     fehBody.classList.contains("settings-active")
@@ -166,11 +165,6 @@ showTask();
 
   // update timer
   function updateTimer() {
-    const workFinished = new Audio("/music/success-fanfare-trumpets-6185.mp3");
-    const restFinished = new Audio(
-      "/music/error-when-entering-the-game-menu-132111.mp3"
-    );
-
     if (!isPaused) {
       remainingTime--;
       if (remainingTime <= 0) {
@@ -187,8 +181,7 @@ showTask();
           // Switch to rest playlist
           if (spotifyPlayer) {
             spotifyPlayer.src = spotifyPlayer.src.replace(
-              "https://open.spotify.com/embed/artist/7HjVvgY9p57LOIrGyulrVU?utm_source=generator",
-              "YOUR_REST_PLAYLIST_ID"
+              "https://open.spotify.com/embed/artist/7HjVvgY9p57LOIrGyulrVU?utm_source=generator"
             );
           }
         } else {
@@ -198,7 +191,6 @@ showTask();
           // Switch back to work playlist
           if (spotifyPlayer) {
             spotifyPlayer.src = spotifyPlayer.src.replace(
-              "YOUR_REST_PLAYLIST_ID",
               "https://open.spotify.com/embed/artist/7HjVvgY9p57LOIrGyulrVU?utm_source=generator"
             );
           }
