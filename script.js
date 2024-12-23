@@ -2,7 +2,6 @@ const sidebar = document.querySelector(".sidebar");
 const sidebarClose = document.querySelector("#sidebar-close");
 const menu = document.querySelector(".menu-content");
 const menuItems = document.querySelectorAll(".submenu-item");
-const subMenuTitles = document.querySelectorAll(".submenu .menu-title");
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
@@ -16,11 +15,6 @@ menuItems.forEach((item, index) => {
         item2.classList.remove("show-submenu");
       }
     });
-  });
-});
-subMenuTitles.forEach((title) => {
-  title.addEventListener("click", () => {
-    menu.classList.remove("submenu-active");
   });
 });
 
@@ -236,7 +230,7 @@ showTask();
 
     circleProgress.style.strokeDashoffset = dashOffset;
     timerTime.textContent = formatTime(remainingTime);
-    document.title = `${formatTime(remainingTime)} - Pomodoro Timer`;
+    document.title = `${formatTime(remainingTime)} - Radinka`;
   }
 
   function formatTime(seconds) {
