@@ -189,7 +189,7 @@ body.timer-running .circle-progress {
   transition: all 1s linear;
 }
 
-#feh-pomodoro {
+#pomodoro {
   position: fixed;
   width: 100%;
   max-width: 350px;
@@ -214,7 +214,7 @@ body.timer-running .circle-progress {
 }
 
 /* overlay */
-#feh-pomodoro-overlay {
+#pomodoro-overlay {
   background: #fff;
   width: 100%;
   height: 100%;
@@ -229,12 +229,12 @@ body.timer-running .circle-progress {
   transition: all 0.3s ease-in-out;
 }
 
-body.page-loaded #feh-pomodoro-overlay {
+body.page-loaded #pomodoro-overlay {
   opacity: 0;
   visibility: hidden;
 }
 
-#feh-pomodoro-overlay img {
+#pomodoro-overlay img {
   width: 150px;
   height: 150px;
 }
@@ -254,14 +254,14 @@ body.page-loaded #feh-pomodoro-overlay {
   transition: all 0.3s ease-in-out;
 }
 
-#feh-toggle-settings {
+#toggle-settings {
   top: 20px;
   right: 20px;
   height: 50px;
 }
 
 /*  progress */
-#feh-timer-progress {
+#timer-progress {
   display: flex;
   justify-content: center;
   margin-bottom: 40px;
@@ -288,29 +288,29 @@ body.page-loaded #feh-pomodoro-overlay {
   transform: rotate(-90deg);
 }
 
-#feh-timer-time {
+#timer-time {
   fill: #5c5c5c;
 }
 
-#feh-timer-rest,
-#feh-timer-pause {
+#timer-rest,
+#timer-pause {
   opacity: 0;
   transition: all 0.3s ease-in-out;
   fill: #5c5c5cd1;
 }
 
-body.settings-active #feh-timer-settings {
+body.settings-active #timer-settings {
   opacity: 1;
   visibility: visible;
 }
 
-body.settings-active #feh-timer-buttons {
+body.settings-active #timer-buttons {
   opacity: 0;
   visibility: hidden;
 }
 
 /* completed session */
-#feh-timer-sessions {
+#timer-sessions {
   border-radius: 50px;
   background: #fff;
   display: flex;
@@ -319,44 +319,44 @@ body.settings-active #feh-timer-buttons {
   transition: all 0.3s ease-in-out;
 }
 
-#feh-timer-sessions p {
+#timer-sessions p {
   padding: 12px;
 }
-p#feh-completed-label {
+p#completed-label {
   width: 80%;
   text-align: center;
 }
-p#feh-completed-sessions {
+p#completed-sessions {
   font-weight: bold;
   color: #222;
   font-size: 20px;
 }
 
 /* timer function*/
-#feh-timer-functions {
+#timer-functions {
   height: 145px;
   position: relative;
 }
 
 /* settings */
-#feh-timer-settings {
+#timer-settings {
   transition: all 0.3s ease-in-out;
   opacity: 0;
   visibility: hidden;
 }
 
-#feh-close-settings {
+#close-settings {
   top: -45px;
   height: 80px;
   background: #d85e3a;
   color: #f7ddd7;
 }
 
-#feh-close-settings:hover {
+#close-settings:hover {
   color: #fff;
 }
 
-#feh-timer-form {
+#timer-form {
   border-radius: 20px;
   position: absolute;
   bottom: 0;
@@ -366,25 +366,25 @@ p#feh-completed-sessions {
   z-index: 1;
 }
 
-.feh-timer-line {
+.timer-line {
   display: flex;
 }
 
-.feh-timer-line:last-child {
+.timer-line:last-child {
   margin-top: 10px;
 }
 
-.feh-timer-line * {
+.timer-line * {
   font-size: 18px;
 }
 
-.feh-timer-line label {
+.timer-line label {
   width: 50%;
   color: #ffffffc7;
   padding: 10px 0 10px 0;
 }
 
-.feh-timer-line input {
+.timer-line input {
   width: 50%;
   color: #5c5c5c;
   background: #fff;
@@ -394,17 +394,17 @@ p#feh-completed-sessions {
   text-align: center;
 }
 
-#feh-timer-form input::-webkit-outer-spin-button,
-#feh-timer-form input::-webkit-inner-spin-button {
+#timer-form input::-webkit-outer-spin-button,
+#timer-form input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-#feh-timer-form input[type="number"] {
+#timer-form input[type="number"] {
   -moz-appearance: textfield;
 }
 
 /* play - pause button */
-#feh-timer-buttons {
+#timer-buttons {
   width: 100%;
   height: 50%;
   position: relative;
@@ -414,7 +414,7 @@ p#feh-completed-sessions {
   transition: all 0.3s ease-in-out;
 }
 
-#feh-timer-buttons button {
+#timer-buttons button {
   background-color: #fd5252;
   position: absolute;
   border: 0px none;
@@ -438,17 +438,17 @@ body.timer-paused #start-btn {
 }
 
 /* timer inner text */
-body.timer-paused:not(.rest-mode) #feh-timer-pause,
-body.rest-mode #feh-timer-text,
-body.rest-mode.timer-paused #feh-timer-pause {
+body.timer-paused:not(.rest-mode) #timer-pause,
+body.rest-mode #timer-text,
+body.rest-mode.timer-paused #timer-pause {
   opacity: 1;
 }
 
-body.rest-mode.timer-paused #feh-timer-rest {
+body.rest-mode.timer-paused #timer-rest {
   opacity: 0;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 770px) {
   .sidebar {
     position: fixed;
     height: 100%;
@@ -457,11 +457,11 @@ body.rest-mode.timer-paused #feh-timer-rest {
     padding: 15px;
     z-index: 999;
     transition: transform 0.5s ease, width 0.5s ease;
-    transform: translateX(0); /* Posisi default */
+    transform: translateX(0);
   }
 
   .sidebar.close {
-    transform: translateX(-400px); /* Geser keluar layar */
+    transform: translateX(-400px);
   }
 
   .main {
