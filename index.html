@@ -30,21 +30,21 @@
       <div id="main">
         <div id="vista-bg"></div>
 
-        <div id="feh-pomodoro">
-          <div id="feh-pomodoro-overlay">
+        <div id="pomodoro">
+          <div id="pomodoro-overlay">
             <img src="images/spinner.gif" alt="" />
           </div>
 
-          <span class="btn-icon" id="feh-toggle-settings"
+          <span class="btn-icon" id="toggle-settings"
             ><i class="fa fa-cog"></i
           ></span>
 
-          <div id="feh-timer-progress">
+          <div id="timer-progress">
             <svg class="circle-timer" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="45" class="circle-background"></circle>
               <circle cx="50" cy="50" r="45" class="circle-progress"></circle>
               <text
-                id="feh-timer-time"
+                id="timer-time"
                 x="50"
                 y="50"
                 text-anchor="middle"
@@ -54,7 +54,7 @@
                 25:00
               </text>
               <text
-                id="feh-timer-pause"
+                id="timer-pause"
                 x="50"
                 y="68"
                 text-anchor="middle"
@@ -64,7 +64,7 @@
                 Paused
               </text>
               <text
-                id="feh-timer-rest"
+                id="timer-rest"
                 x="50"
                 y="68"
                 text-anchor="middle"
@@ -76,37 +76,39 @@
             </svg>
           </div>
 
-          <div id="feh-timer-functions">
-            <div id="feh-timer-settings">
-              <span class="btn-icon" id="feh-close-settings"
+          <div id="timer-functions">
+            <div id="timer-settings">
+              <span class="btn-icon" id="close-settings"
                 ><i class="fa fa-times"></i
               ></span>
-              <form action="" id="feh-timer-form">
-                <p class="feh-timer-line">
+              <form action="" id="timer-form">
+                <p class="timer-line">
                   <label for="work-duration">Pomodoro: </label>
                   <input type="number" id="work-duration" value="25" min="1" />
                 </p>
-                <p class="feh-timer-line">
+                <p class="timer-line">
                   <label for="rest-duration">Rest: </label>
                   <input type="number" id="rest-duration" value="5" min="1" />
                 </p>
               </form>
             </div>
-            <div id="feh-timer-buttons">
+            <div id="timer-buttons">
               <button id="pause-btn"><i class="fa fa-pause"></i></button>
               <button id="start-btn"><i class="fa fa-play"></i></button>
             </div>
             <div id="spotify-player">
-              <iframe
-                style="border-radius: 12px"
-                src="https://open.spotify.com/embed/artist/7HjVvgY9p57LOIrGyulrVU?utm_source=generator"
-                width="100%"
-                height="120"
-                frameborder="0"
-                allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
+              <div id="spotify-player">
+                <iframe
+                  style="border-radius: 12px"
+                  src="https://open.spotify.com/embed/artist/7HjVvgY9p57LOIrGyulrVU?utm_source=generator&autoplay=0&robustness=optional"
+                  width="100%"
+                  height="120"
+                  frameborder="0"
+                  allowfullscreen=""
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
