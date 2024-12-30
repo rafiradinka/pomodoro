@@ -279,7 +279,7 @@ body.page-loaded #pomodoro-overlay {
 }
 
 .circle-progress {
-  stroke: #fd5252;
+  stroke: #936e43;
   stroke-width: 7;
   stroke-linecap: round;
   stroke-dasharray: 282.7433388230814;
@@ -348,7 +348,7 @@ p#completed-sessions {
 #close-settings {
   top: -45px;
   height: 80px;
-  background: #d85e3a;
+  background: #231e19;
   color: #f7ddd7;
 }
 
@@ -361,7 +361,7 @@ p#completed-sessions {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: #d85e3a;
+  background: #231e19;
   padding: 20px;
   z-index: 1;
 }
@@ -415,7 +415,7 @@ p#completed-sessions {
 }
 
 #timer-buttons button {
-  background-color: #fd5252;
+  background-color: #231e19;
   position: absolute;
   border: 0px none;
   cursor: pointer;
