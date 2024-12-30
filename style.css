@@ -182,7 +182,7 @@ body.rest-mode #vista-bg {
 }
 
 body.rest-mode .circle-progress {
-  stroke: #fd525385;
+  stroke: #936e43;
 }
 
 body.timer-running .circle-progress {
@@ -415,7 +415,7 @@ p#completed-sessions {
 }
 
 #timer-buttons button {
-  background-color: #231e19;
+  background-color: #936e43;
   position: absolute;
   border: 0px none;
   cursor: pointer;
